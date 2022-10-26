@@ -1,0 +1,26 @@
+1) Json-Dictionary arasındaki fark nedir?
+JSON, veri alışverişi için kullanılan, makineler tarafındanda uygulanabilen veri biçimidir. 
+Dictionary, anahtar ve değer şeklinde verileri Python üzerinde saklayabileceğimiz bir veri yapısıdır. 
+  -Dumps Ne işe yarıyor? 
+JSON verilerini Python verilerine dönüştürmesini kolaylaştırır. 
+  -Neden encode kullandık? Neden data.encode.utf-8nşeklinde kullanmadık?
+Birbirinden farklı veri biçimlerini değiştirerek makinenin anlayabileceği uygun formata çevirmek için kullanılır. 
+
+2) Json dumps nedir? 
+Bir nesneyi Json nesnesine dönüştürmemizi sağlar. 
+  -Json load nedir? 
+Bir nesne alır ve Json nesnesini döndürür.
+  -Json loads nedir?
+JSON verilerinden oluşan yerel dize, bayt veya bayt dizisinin Python sözlüğünde seri hale getirilmesi için kullanılır.
+
+3)Dockera girdikten sonra spesific bir container hangi networkta çalışıyor ve default ip nasıl bulunacak? Bir satırlık kod olarak yazılacak.
+Default olarak Bridge Network kullanıyor.  
+docker inspect -f “{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}” container_id
+
+4)Neden UTF-8 kullanıyoruz?
+Bu Unicode kodlaması iyi bir seçimdir çünkü ihtiyaç duyabileceğimiz herhangi bir karakteri işlemek için tek bir karakter kodlaması kullanabiliriz.
+
+5)192.168.0.1 nedir ve 127.00.01 arasındaki fark nedir?
+192.168.0.1 yerel bir IP adresidir, genelde modem veya router arayüzüne ulaşmak için bu IP adresi kullanılır.
+127.00.01 bilgisayarlardaki ev ağı olan yerel ana bilgisayardır. Temel olarak, tüm ağ testleriniz ve PHP/HTML kodlamanız ve dolayısıyla ifadeleriniz için ev sahipliği yapmaktadır.
+
